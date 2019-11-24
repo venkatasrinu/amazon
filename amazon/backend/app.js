@@ -8,6 +8,18 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+//----------db------/
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017";
+// MongoClient.connect(url,function(error,result){
+//   if(error){
+//     console.log("db error",error)
+//   }else{
+    
+//    db= result.db("project");
+//     console.log("db created "+"connected to",db.databaseName);
+//   }
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

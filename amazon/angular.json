@@ -53,7 +53,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "amazon:build"
+            "browserTarget": "amazon:build",
+            "proxyConfig": "src/proxy.config.json"
           },
           "configurations": {
             "production": {

@@ -9,7 +9,7 @@ import { WomenComponent } from './women/women.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import {HttpClientModule} from '@angular/common/http';
  const rout:Routes=[
    {
      path:"men",
@@ -40,7 +40,7 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(rout),FormsModule
+    BrowserModule,RouterModule.forRoot(rout),FormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
