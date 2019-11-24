@@ -25,9 +25,16 @@ obj=req.body
     if(err){
       console.log(err,"inser error")
     }else{
-      console.log("data insert sucess");
-      res.setHeader('Content-Type', 'application/json');
-      res.send(result)
+      console.log("data insert sucess")
+      db.collection("login").find({}).toArray(function(err,res1){
+        if(err){
+          console.log(err,"geting data error")
+          res.send(err)
+        }else{
+          console.log(res1,"data form db")
+          res.send(res1)
+        }
+      })
     }
   })
 });
